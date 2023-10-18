@@ -1,4 +1,4 @@
-import { Options } from './types'
+import { Options, RequestInitOptions } from './types'
 
 function getContentFromDataUrl(dataURL: string) {
   return dataURL.split(/,/)[1]
@@ -14,10 +14,10 @@ export function makeDataUrl(content: string, mimeType: string) {
 
 export async function fetchAsDataURL<T>(
   url: string,
-  init: RequestInit | undefined,
+  init: RequestInitOptions,
   process: (data: { result: string; res: Response }) => T,
 ): Promise<T> {
-  const res = await fetch(url, init)
+  const res = await fetch(url, typeof init === 'function' ? init(url) : init)
   if (res.status === 404) {
     throw new Error(`Resource "${res.url}" not found`)
   }

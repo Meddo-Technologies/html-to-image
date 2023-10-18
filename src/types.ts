@@ -1,3 +1,8 @@
+export type RequestInitOptions =
+  | RequestInit
+  | undefined
+  | ((imageUrl: string) => RequestInit | undefined)
+
 export interface Options {
   /**
    * Width in pixels to be applied to node before rendering.
@@ -90,5 +95,5 @@ export interface Options {
    *the second parameter of  window.fetch (Promise<Response> fetch(input[, init]))
    *
    */
-  fetchRequestInit?: RequestInit
+  fetchRequestInit?: RequestInitOptions
 }
