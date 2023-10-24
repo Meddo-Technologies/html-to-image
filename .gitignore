@@ -11,4 +11,5 @@ dist
 es
 lib
 test/coverage
-
+.yarn/
+!.yarn/releases
