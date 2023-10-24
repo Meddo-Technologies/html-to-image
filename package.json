@@ -48,7 +48,7 @@
     "name": "bubkooo",
     "email": "bubkoo.wy@gmail.com"
   },
-    "bugs": {
+  "bugs": {
     "url": "https://github.com/bubkoo/html-to-image/issues"
   },
   "homepage": "https://github.com/bubkoo/html-to-image#readme",
@@ -63,7 +63,6 @@
     "@types/pixelmatch": "^5.2.4",
     "coveralls": "^3.1.1",
     "eslint": "^8.22.0",
-    "husky": "^8.0.1",
     "is-ci": "^3.0.1",
     "jasmine-core": "^4.3.0",
     "karma": "^6.4.0",
